@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-class</title>
+</head>
+
+<body>
+    <!--2. Реализовать класс, описывающий простой маркер. В классе должны быть следующие компоненты: поле, которое хранит цвет маркера; поле, которое хранит количество чернил в маркере (в процентах); метод для печати (метод принимает строку и выводит текст
+    соответствующим цветом; текст выводится до тех пор, пока в маркере есть чернила; один не пробельный символ – это 0,5% чернил в маркере). Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для
+    заправки маркера. Продемонстрировать работу написанных методов -->
+    <p id="fillid"></p>
+    <p id="qwer"></p>
+
+    <script>
+        class market {
+            constructor(color, quantity, fill) {
+                this.color = color;
+                this.quantity = quantity * 2;
+                this.fill = this._findFill(inputFillId);
+            }
+            write(text) {
+                let newString = '';
+                for (let index = 0; index < text.length; index++) {
+                    if (index >= this.quantity) {
+                        break;
+                    }
+                    newString = newString + text[index];
+                }
+                console.log(this.fill);
+
+                this.fill.innerText = newString;
+                this.fill.istyle.color = this.color;
+            }
+
+            _findFill(item) {
+                return document.getElementById(itemId);
+            }
+        }
+        let pen = new Marker("red", 20, "fillid");
+        pen.write("Lorem ipsum dolor sit amet.");
+
+        let pen2 = new Marker("green", 20, "qwer");
+        pen2.write("Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.");
+
+        // console.log("pen", pen);
+        console.log("pen2", pen2);
+    </script>
+
+
+</body>
+<div>
+    <!--3. Реализовать класс Employee, описывающий работника, и создать массив работников банка. Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка. Массив работников необходимо передавать через конструктор, а получать HTML-код
+        с помощью метода getHtml(). Создать объект класса EmpTable и вывести на экран результат работы метода getHtml(). -->
+    <script></script>
+</div>
+<div>
+    <!--1. Реализовать класс, описывающий окружность. В классе должны быть следующие компоненты: поле, хранящее радиус окружности; get-свойство, возвращающее радиус окружности; set-свойство, устанавливающее радиус окружности; get-свойство, возвращающее диаметр
+    окружности; метод, вычисляющий площадь окружности; метод, вычисляющий длину окружности. Продемонстрировать работу свойств и методов. -->
+    <script></script>
+</div>
+
+</html>

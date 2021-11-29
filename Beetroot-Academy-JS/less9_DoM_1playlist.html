@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-DOM-1</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function() {
+            let list = document.getElementById("list");
+            for (let i = 0; i < 8; i++) {
+                let li = document.createElement('li');
+                li.innerText = `list item ${i+1}`;
+                list.playList(li);
+            }
+        }
+
+        function playList() {
+            let list = document.getElementById("playList");
+            // Получение первого дочернего элемента в списке.
+            let playlist = playList;
+            if (playlist != null) {}
+        }
+
+        var playList = [{
+            author: "LED ZEPPELIN",
+            song: "STAIRWAY TO HEAVEN"
+        }, {
+            author: "QUEEN",
+            song: "BOHEMIAN RHAPSODY"
+        }, {
+            author: "LYNYRD SKYNYRD",
+            song: "FREE BIRD"
+        }, {
+            author: "DEEP PURPLE",
+            song: "SMOKE ON THE WATER"
+        }, {
+            author: "JIMI HENDRIX",
+            song: "ALL ALONG THE WATCHTOWER"
+        }, {
+            author: "AC/DC",
+            song: "BACK IN BLACK"
+        }, {
+            author: "QUEEN",
+            song: "WE WILL ROCK YOU"
+        }, {
+            author: "METALLICA",
+            song: "ENTER SANDMAN"
+        }];
+
+        function createNewPlayList() {
+            let list = document.getElementById("list");
+            let item = document.createElement("li");
+            item.innerHTML = "NEW ITEM";
+            if (list.firstList != null) {
+                // вставка элемента перед указанным элементом.
+                list.insertBefore(item, list.firstList);
+            }
+        }
+    </script>
+</body>
+
+<body>
+    <ul id="playList"></ul>
+    <br />
+    <input type="button" onclick="playList()" style="width: 350px;" value="1. LED ZEPPELIN - STAIRWAY TO HEAVEN" /><br />
+    <input type="button" onclick="playList()" style="width: 350px;" value="2. QUEEN - BOHEMIAN RHAPSODY" /><br />
+    <input type="button" onclick="playList()" style="width: 350px;" value="3. LYNYRD SKYNYRD - FREE BIRD" /><br />
+    <input type="button" onclick="playList()" style="width: 350px;" value="4. DEEP PURPLE - SMOKE ON THE WATER" /><br />
+    <input type="button" onclick="playList()" style="width: 350px;" value="5. JIMI HENDRIX - ALL ALONG THE WATCHTOWER" /><br />
+    <input type="button" onclick="playList()" style="width: 350px;" value="6. AC/DC - BACK IN BLACK" /><br />
+    <input type="button" onclick="playList()" style="width: 350px;" value="7. QUEEN - WE WILL ROCK YOU" /><br />
+    <input type="button" onclick="playList()" style="width: 350px;" value="8. METALLICA - ENTER SANDMAN" /><br />
+    <input type="button " onclick="createNewPlayList()" style="width: 345px;" value="9. new" /><br />
+</body>
+
+</html>

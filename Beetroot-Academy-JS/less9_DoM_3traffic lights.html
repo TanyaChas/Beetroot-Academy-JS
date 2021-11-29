@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<style>
+    body {
+        background: linear-gradient(rgb(52, 166, 255), rgb(71, 124, 255));
+        height: 100vh;
+    }
+    
+    #traffic-light {
+        width: 70px;
+        height: 240px;
+        background: #222;
+        border-radius: 8px;
+        margin: auto;
+        padding: 15px;
+    }
+    
+    .light {
+        display: inline-block;
+        border-radius: 100%;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 8px;
+        opacity: 0.2;
+        transition: opacity 0.2s
+    }
+    
+    .active {
+        opacity: 1;
+    }
+    
+    .red {
+        background: red;
+    }
+    
+    .yellow {
+        background: yellow;
+    }
+    
+    .green {
+        background: green;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JavaScript - DOM - modal</title>
+
+    <body>
+        <div id="traffic-light">
+            <div class="light red" :class="{active: current=='red'}"></div>
+            <div class="light yellow" :class="{active: current=='yellow'}"></div>
+            <div class="light green" :class="{active: current=='green'}"></div>
+        </div>
+    </body>
+
+    <script>
+        const colorList = [{
+            name: 'yellow',
+            interval: 500
+        }, {
+            name: 'red',
+            interval: 4000
+        }, {
+            name: 'yellow',
+            interval: 500
+        }, {
+            name: 'green',
+            interval: 4000
+        }];
+
+        let count = 0;
+
+        function changeColor() {
+            if (count === colorList.length) {
+                count = 0;
+            }
+            console.log(colorList[count].name)
+            setTimeout(changeColor, colorList[count].interval)
+            count = count + 1;
+        }
+    </script>
+
+</html>

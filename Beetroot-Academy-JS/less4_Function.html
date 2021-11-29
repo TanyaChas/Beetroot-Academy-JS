@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-4 function</title>
+</head>
+<body>
+    <script>
+ /* Написать функцию, которая принимает 2 числа и возвращает -1, если первое меньше, чем второе; 1 – если первое больше, чем второе; и 0 – если числа равны.*/
+/*function pow(x, n) {
+    let result = x;
+    for (let i = 1; i < n; i++) {
+        result *= x;
+    }
+    return result;
+}
+ let x = prompt("x?", '');
+ let n = prompt("n?", '');
+ if (n < 1) {
+     alert('n');
+ } else {
+     alert(pow(x, n));
+ }
+ */
+ //Написать функцию, которая вычисляет факториал переданного ей числа.
+/* let n = 5;
+let whileFactorial =1;
+while (n > 1) {
+    console.log("while n", n);
+    whileFactorial = whileFactorial * n;
+    console.log("while whileFactoril", whileFactorial);
+    n = n - 1;
+}
+console.log("while result", whileFactorial);
+
+function factorial(n) {
+    let result = null;
+    console.log("n :", n);
+    if (n != 1) {
+        result = n * factorial(n -1)
+    } else {
+        result = 1;
+    }
+    console.log("recursion result :", result);
+
+}
+factorial(5);
+*/
+
+/* Написать функцию, которая принимает три отдельные цифры и превращает их в одно число. Например: цифры 1, 4, 9 превратятся в число 149.*/
+
+/* Написать функцию, которая принимает длину и ширину прямоугольника и вычисляет его площадь. 
+Если в функцию передали 1 параметр, то она вычисляет площадь квадрата.*/
+//1
+/* function shapeArea (a, b) {
+    return a * b;
+}
+ console.log(shapeArea(4));   //1 вариант
+// console.log(shapeArea(4, 6)); //2 
+// console.log(shapeArea());
+ */
+//2
+/* function shapeArea (a, b) {
+    debugger
+    console.log(Boolean(a));
+    console.log(Boolean(b));
+    if (a || b == undefined) {
+        return a * a;
+    }
+    result a * b;
+}
+// console.log(shapeArea(4));   //1 вариант
+// console.log(shapeArea(4, 6)); //2 
+// console.log(shapeArea());
+//3
+function shapeArea (a, b) {
+    debugger
+    console.log(Boolean(a));
+    console.log(Boolean(b));
+    if (b == undefined && a) {   // есди а есть b нет
+        return a * a;
+    } else if (a && b) {    // если ввели а и b 
+      result a * b;
+    } else {                  // если ничего не ввели 
+        result 'Enter number';
+    }
+   
+}
+// console.log(shapeArea(4));   //1 вариант
+// console.log(shapeArea(4, 6)); //2 
+console.log(shapeArea());
+*/
+/* Написать функцию, которая проверяет, является ли переданное ей число совершенным. 
+Совершенное число – это число, равное сумме всех своих собственных делителей.*/
+
+
+/* Написать функцию, которая принимает минимальное и максимальное значения для диапазона, 
+и выводит только те числа из диапазона, которые являются совершенными. 
+Используйте написанную ранее функцию, чтобы узнавать, совершенное число или нет. */
+/* let a1 = prompt("Введение первое число");
+let a2 = prompt("Введение второе число");
+
+let perfectNumber = function (a) {
+    let result = 0;
+    for (let i = a1; i <= a2, i++) {
+        if (a % 1 === 0) {      // делится ли на интерацию?
+            result += i;
+        }
+    }
+}
+// 1
+if (result === a) {               //сумма делителя равняется ли числу 
+    retutn `введенное число ${a} является совершенным`;
+} else {
+    retutn `введенное число ${a} не является совершенным`;
+}
+
+// 2
+if (result === a) {               //два совершенных числа 
+    retutn true;    //в случае если а равняется тру
+} else {
+    retutn false;   //в случае если а не равняется тру
+}
+
+function diapazone(start, end) {
+    for (let i = start; i <= and, i++) {
+      // console.log(i)
+        
+     /* console.log(perfectNumber(i))   // все числа из диапазона
+       perfectNumber(i)
+       */
+     /* if (perfectNumber (i) == true) {   // если все true выводит все 
+          console.log(Number(perfectNumber(i)));
+          
+      }
+    }
+}
+
+diapazone(a1, a2);
+// console.log(a1, a2); */
+
+/* Написать функцию, которая принимает время (часы, минуты, секунды) 
+и выводит его на экран в формате «чч:мм:сс». 
+Если при вызове функции минуты и/или секунды не были переданы, то выводить их как 00. */
+/* Написать функцию, которая принимает часы, минуты 
+и секунды и возвращает это время в секундах.*/
+/* Написать функцию, которая принимает количество секунд, переводит их в часы, 
+минуты и секунды и возвращает в виде строки «чч:мм:сс».*/
+/* Написать функцию, которая считает разницу между датами. Функция принимает 6 параметров, 
+которые описывают 2 даты, и возвращает результат в виде строки «чч:мм:сс». 
+При выполнении задания используйте функции из предыдущих 2-х заданий: сначала обе даты переведите в секунды, узнайте разницу в секундах, 
+а потом разницу переведите обратно в «чч:мм:сс»*/
+  
+  
+   </script>
+</body>
+</html>
