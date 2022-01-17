@@ -1,0 +1,106 @@
+.header {
+    &__container {
+        width: 100%;
+        display: flex;
+        background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: border-box;
+    }
+    &__background {
+        background: url("../img/Mask\ Group.png");
+    }
+    &__nav {
+        padding: 20px 0 90px 0;
+        margin: 0 auto;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        &_logo {
+            min-width: 241px;
+            padding-left: 215px;
+        }
+        &_a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 400;
+            font-family: "Aleo", serif;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-family: Source Sans Pro;
+        }
+        &_social {
+            padding-right: 215px;
+        }
+        &_burger {
+            display: none;
+            &_btn {
+                display: block;
+                width: 32px;
+                height: 3px;
+                border: none;
+                position: relative;
+                background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+                cursor: pointer;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 32px;
+                    height: 3px;
+                    background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+                    top: -8px;
+                    right: 0;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 32px;
+                    height: 3px;
+                    background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+                    top: 8px;
+                    right: 0;
+                }
+                &:focus {
+                    outline: none;
+                } 
+            }
+        }
+    }
+    &__text {
+        text-align: center;
+        font-family: Montserrat;
+        &_h {
+            font-size: 80px;
+            line-height: 98px;
+            letter-spacing: 0.1em;
+            color: #ffffff;
+        }
+        &_p {
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.3em;
+            color: #ffffff;
+        }
+    }
+    &__scroll {
+        padding-top: 190px;
+        padding-bottom: 50px;
+        &_arrow {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+            border-radius: 50px;
+            position: absolute;
+            bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

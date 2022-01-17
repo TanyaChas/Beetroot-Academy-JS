@@ -1,0 +1,204 @@
+.container {
+    max-width: 1170px;
+    width: 73.125%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }  
+.news {
+    background: linear-gradient(to top, #3c7fd4, #24ccfa);
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url("../img/latest-news-bg.png") no-repeat center;
+      background-size: cover;
+      background-attachment: fixed;
+      z-index: 2;
+    }
+}
+.news_inner {
+    padding: 140px 0 209px;
+    position: relative;
+    z-index: 3;
+}
+  
+.news_block {
+    margin-top: 100px;
+    position: relative;
+    // display: flex;
+    // justify-content: space-between;
+}
+  
+.separate_news {
+    display: flex;
+    flex-direction: column;
+    margin: 0 12px;
+    flex-basis: 31%;
+    height: 525px;
+    background: $main-bright-color;
+    position: relative;
+    &__img {
+      width: 100%;
+      height: 45%;
+    }
+    &__block {
+      padding: 30px 30px 30px 20px;
+    }
+    &__title {
+      font-weight: bold;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: $main-dark-color;
+    }
+    &__text {
+      margin-top: 20px;
+      font-family: "OpenSans", sans-serif;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      line-height: 21px;
+      color: #4b5562;
+    }
+    &__author {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 30px;
+    }
+    &__photo {
+      border-radius: 50px;
+    }
+    &__author-name-block {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    &__name {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $main-dark-color;
+    }
+    &__date {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #55b7ff;
+    }
+    @include respond-to("xl") {
+      &__title {
+        font-size: 19px;
+      }
+      &__text {
+        font-size: 15px;
+      }
+      &__photo {
+        width: 40px;
+      }
+      &__name {
+        font-size: 15px;
+      }
+    }
+    @include respond-to("lg") {
+      &__title {
+        font-size: 23px;
+      }
+      &__text {
+        font-size: 17px;
+      }
+      &__photo {
+        width: 45px;
+      }
+      &__name {
+        font-size: 17px;
+      }
+    }
+    @include respond-to("sm") {
+      &__title {
+        font-size: 15px;
+      }
+      &__text {
+        font-size: 14px;
+      }
+      &__photo {
+        width: 40px;
+      }
+      &__name {
+        font-size: 13px;
+      }
+    }
+  
+  }
+  
+  /* Ограничивающая оболочка */
+  .slick-list {
+    overflow: hidden;
+  }
+  /* Лента слайдов */
+  .slick-track {
+    display: flex;
+  }
+  /* Стрелка */
+  .news-block .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-125%);
+    z-index: 4;
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .news-block .slick-arrow:focus {
+    outline: none;
+  }
+  /* Стрелка влево */
+  .news-block .slick-arrow.slick-prev {
+    left: -10%;
+    background: url("../img/chevron-left-solid.svg") 0 0 no-repeat;
+    background-size: 25%;
+    background-position: center;
+  }
+  /* Стрелка вправо */
+  .news-block .slick-arrow.slick-next {
+    right: -10%;
+    background: url("../img/chevron-right-solid.svg") 0 0 no-repeat;
+    background-size: 25%;
+    background-position: center;
+  }
+  /* Точки (булиты) */
+  .news-block .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .news-block .slick-dots li {
+    margin: 60px 15px 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $main-bright-color;
+    border-radius: 50px;
+    cursor: pointer;
+    background: none;
+  }
+  /* Активная точка */
+  .news-block .slick-dots li.slick-active {
+    background: $main-bright-color;
+  }
+  /* Элемент точки */
+  .news-block .slick-dots li button {
+    font-size: 0;
+    border: none;
+    background: none;
+  }
+  
+  .news-block .slick-dots li button:focus {
+    outline: none;
+  }

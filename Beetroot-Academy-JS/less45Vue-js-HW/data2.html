@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Data option</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="container pt-5">
+            <h2>Beetroot Academy: {{link}}</h2>
+            <ul>
+                <li v-for="student in students">
+                    {{student.name}}, {{student.age}} years old.
+                </li>
+            </ul>
+            <h2>data:</h2>
+            <pre>{{$data}}</pre>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            data: {
+                link: 'https://beetroot.academy/en/',
+                students: [
+                    {
+                        name: 'Make',
+                        age: 18,
+                    },
+                    {
+                        name: 'Oliver',
+                        age: 19,
+                    },
+                ],
+            },
+        });
+    </script>
+</body>
+
+</html>

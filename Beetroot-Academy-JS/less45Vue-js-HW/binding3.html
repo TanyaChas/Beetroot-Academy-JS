@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Data binding</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="container pt-5">
+            <a v-bind:href="href" target="_blank">{{name}}</a>
+            <p v-html="link"></p>
+            <hr />
+            <p>{{name}}</p>
+            <p v-text="name"></p>
+            <hr />
+            <!-- Style binding -->
+            <p :style="paragraphStyle">Lorem ipsum dolor sit amet.</p>
+            <hr />
+            <!-- Class binding -->
+            <button :class="buttonClass">First button</button>
+            <button :class="{'btn-warning': true}" class="btn">
+                Second button
+            </button>
+            <hr />
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                href: 'https://beetroot.academy/en/',
+                link: '<a href="https://beetroot.academy/en/">Beetroot Academy</a>',
+                name: 'Beetroot Academy',
+                paragraphStyle: {
+                    color: 'blue',
+                    textAlign: 'center',
+                    border: '2px solid red',
+                },
+                buttonClass: ['btn', 'btn-primary'],
+            },
+        });
+    </script>
+</body>
+
+</html>

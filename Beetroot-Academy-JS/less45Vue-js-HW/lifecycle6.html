@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue lifecycle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div id="app">
+            <p>Counter: <span>{{counter}}</span></p>
+            <button class="btn btn-success" @click="incrementCounter">
+                Add 1
+            </button>
+            <br />
+            <br />
+        </div>
+        <button id="destroy" class="btn btn-danger">Delete instance</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+            },
+            methods: {
+                incrementCounter() {
+                    this.counter++;
+                },
+            },
+            beforeCreate() {
+                console.log('Before create');
+            },
+            created() {
+                console.log('Created');
+            },
+            beforeMount() {
+                console.log('Before mount');
+            },
+            mounted() {
+                console.log('Mounted');
+            },
+            beforeUpdate() {
+                console.log('Before update');
+            },
+            updated() {
+                console.log('Updated');
+            },
+            beforeDestroy() {
+                console.log('Before destroy');
+            },
+            destroyed() {
+                console.log('Destroyed');
+            },
+        });
+
+        document
+            .getElementById('destroy')
+            .addEventListener('click', () => vm.$destroy());
+    </script>
+</body>
+
+</html>
